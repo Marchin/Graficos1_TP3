@@ -83,9 +83,9 @@
       <AdditionalDependencies>allegro-debug.lib;allegro_primitives-debug.lib;allegro_main-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro-debug.lib" "$(OutDir)"
-copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro_primitives-debug.lib" "$(OutDir)"
-copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro_main-debug.lib" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro_primitives-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
 
 </Command>
     </PostBuildEvent>
@@ -116,9 +116,9 @@ copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro_main-debug.
       <AdditionalDependencies>allegro.lib;allegro_primitives.lib;allegro_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro.lib" "$(OutDir)"
-copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro_primitives.lib" "$(OutDir)"
-copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\lib\allegro_main.lib" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro_primitives-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\Allegro\allegro_5.1.12_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
 
 </Command>
     </PostBuildEvent>

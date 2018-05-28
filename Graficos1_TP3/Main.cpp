@@ -78,6 +78,12 @@ int main(int argc, char **argv) {
 		al_draw_filled_rectangle(posP2_x, posP2_y,
 			posP2_x + REC_WIDTH, posP2_y + REC_HEIGHT, WHITE);
 
+		if (((posP1_x + REC_WIDTH > posP2_x) && (posP1_x < posP2_x + REC_WIDTH)) &&
+			((posP1_y + REC_HEIGHT > posP2_y) && (posP1_y < posP2_x + REC_HEIGHT))) {
+
+			exit = true;
+		}
+
 		al_flip_display();
 		al_clear_to_color(al_map_rgb(0, 0, 0));
 	}

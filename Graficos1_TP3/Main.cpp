@@ -15,8 +15,8 @@ int main(int argc, char **argv) {
 	bool exit = false;
 	float posP1_x = 0;
 	float posP1_y = 0;
-	float posP2_x = SCREEN_WIDTH - REC_WIDTH;
-	float posP2_y = 0;
+	float posP2_x = SCREEN_WIDTH / 2.f;
+	float posP2_y = SCREEN_HEIGHT / 2.f;
 	float moveSpeed = 5;
 
 	if (!al_init()) {
@@ -63,11 +63,19 @@ int main(int argc, char **argv) {
 				(posP1_x < SCREEN_WIDTH - REC_WIDTH)) {
 
 				posP1_x += moveSpeed;
-			}
-			else if (al_key_down(&keyState, ALLEGRO_KEY_A) &&
+			} else if (al_key_down(&keyState, ALLEGRO_KEY_A) &&
 				(posP1_x > 0)) {
 
 				posP1_x -= moveSpeed;
+			}
+			if (al_key_down(&keyState, ALLEGRO_KEY_S) &&
+				(posP1_y < SCREEN_HEIGHT - REC_HEIGHT)) {
+
+				posP1_y += moveSpeed;
+			} else if (al_key_down(&keyState, ALLEGRO_KEY_W) &&
+				(posP1_y > 0)) {
+
+				posP1_y -= moveSpeed;
 			}
 		}
 
@@ -79,7 +87,7 @@ int main(int argc, char **argv) {
 			posP2_x + REC_WIDTH, posP2_y + REC_HEIGHT, WHITE);
 
 		if (((posP1_x + REC_WIDTH > posP2_x) && (posP1_x < posP2_x + REC_WIDTH)) &&
-			((posP1_y + REC_HEIGHT > posP2_y) && (posP1_y < posP2_x + REC_HEIGHT))) {
+			((posP1_y + REC_HEIGHT > posP2_y) && (posP1_y < posP2_y + REC_HEIGHT))) {
 
 			exit = true;
 		}

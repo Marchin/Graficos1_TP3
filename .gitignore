@@ -24,7 +24,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 
-!Libraries\Allegro\allegro_5.1.12_x86\bin/
+!Libraries/Allegro/allegro_5.1.12_x86/bin/
 
 # Visual Studio 2015 cache/options directory
 .vs/
